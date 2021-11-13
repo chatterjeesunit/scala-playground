@@ -6,7 +6,7 @@ import scala.util.{Failure, Success, Try}
   * Created by sunitc on 12/25/16.
   */
 object AVeryLargeSum {
-  def main(args: Array[String]) {
+  def main(args: Array[String]):Unit = {
     val lines: List[String] = scala.io.Source.stdin.getLines.take(2).toList
     Try{
       val n: Int = lines(0).toInt

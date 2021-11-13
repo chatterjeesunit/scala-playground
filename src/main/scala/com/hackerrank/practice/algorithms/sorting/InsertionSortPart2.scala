@@ -7,7 +7,7 @@ import java.util.Scanner
 
 object InsertionSortPart2 {
 
-  def main(args: Array[String]) {
+  def main(args: Array[String]):Unit = {
 
     val sc: Scanner = new Scanner(System.in)
     val size: Int = sc.nextLine.trim.split(" ").toList.head.toInt

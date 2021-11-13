@@ -5,7 +5,7 @@ package com.hackerrank.challenges.hack.h_101_50
   */
 object EvenOdd {
 
-  def main(args: Array[String]) {
+  def main(args: Array[String]):Unit = {
     val sc = new java.util.Scanner(System.in);
     //  Return the minimum number of chocolates that need to be moved, or -1 if it's impossible.
     var q = sc.nextInt();

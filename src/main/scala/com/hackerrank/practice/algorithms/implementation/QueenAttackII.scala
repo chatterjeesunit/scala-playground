@@ -35,7 +35,7 @@ object QueenAttackII {
     override def toString: String = s"($x1,$y1) -> ($x2,$y2) : ${numElement()}"
   }
 
-  def main(args: Array[String]) {
+  def main(args: Array[String]):Unit = {
     val sc = new java.util.Scanner(System.in)
     var n = sc.nextInt()
     var k = sc.nextInt()

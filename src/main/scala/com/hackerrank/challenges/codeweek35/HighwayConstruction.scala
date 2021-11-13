@@ -57,7 +57,7 @@ object HighwayConstruction {
     }
 
 
-    def main(args: Array[String]) {
+    def main(args: Array[String]):Unit = {
       val sc = new java.util.Scanner (System.in);
       var q = sc.nextInt();
       var a0 = 0;

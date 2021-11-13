@@ -1,4 +1,4 @@
-package com.test.json
+package com.playground.json
 
 /**
  * Created by sunitc on 27/9/15.

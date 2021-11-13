@@ -5,7 +5,7 @@ package com.hackerrank.practice.algorithms.string.medium
   */
 object TwoCharacters {
 
-  def main(args: Array[String]) {
+  def main(args: Array[String]):Unit = {
     val sc = new java.util.Scanner(System.in);
     var len = sc.nextInt();
     var s = sc.next();

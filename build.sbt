@@ -1,8 +1,5 @@
-name := "pojo-scala"
+name := "scala-playground"
 
-version := "1.0"
+version := "0.1"
 
-scalaVersion := "2.11.8"
-
-libraryDependencies += "org.scalatest" %% "scalatest" % "2.2.6" % "test"
-libraryDependencies += "org.projectlombok" % "lombok" % "1.18.2" % "provided"
+scalaVersion := "3.1.0"

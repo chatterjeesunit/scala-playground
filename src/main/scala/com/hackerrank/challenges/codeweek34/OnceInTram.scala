@@ -78,7 +78,7 @@ object OnceInTram {
   }
 
 
-  def main(args: Array[String]) {
+  def main(args: Array[String]):Unit = {
     val sc = new java.util.Scanner (System.in);
     var x = sc.nextInt();
     val result = onceInATram(x,6);

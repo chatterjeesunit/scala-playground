@@ -6,7 +6,7 @@ import scala.util.{Failure, Success, Try}
   * Created by sunitc on 12/25/16.
   */
 object SolveMeFirst {
-  def main(args: Array[String]) {
+  def main(args: Array[String]):Unit = {
     val inputList: List[String] = scala.io.Source.stdin.getLines().take(2).toList
     val sumResult: Int = inputList.size match {
       case 2 => Try {

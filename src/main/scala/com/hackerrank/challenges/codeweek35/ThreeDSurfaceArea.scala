@@ -33,7 +33,7 @@ object ThreeDSurfaceArea {
     totalArea
   }
 
-  def main(args: Array[String]) {
+  def main(args: Array[String]):Unit = {
     val sc = new java.util.Scanner (System.in)
     var H = sc.nextInt()
     var W = sc.nextInt()

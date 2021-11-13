@@ -5,7 +5,7 @@ package com.hackerrank.practice.algorithms.string.easy
   */
 object CamelCase {
 
-  def main(args: Array[String]) {
+  def main(args: Array[String]):Unit = {
     val sc = new java.util.Scanner (System.in);
     val s = sc.next();
 

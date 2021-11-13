@@ -1,4 +1,4 @@
-package com.expr
+package com.playground.expr
 
 import scala.collection.JavaConverters._
 import scala.util.matching.Regex

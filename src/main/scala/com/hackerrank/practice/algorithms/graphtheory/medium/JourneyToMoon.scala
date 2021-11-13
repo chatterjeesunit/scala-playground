@@ -21,7 +21,7 @@ import java.util.Scanner;
 
 object JourneyToMoon {
 
-  def main(args: Array[String]) {
+  def main(args: Array[String]):Unit = {
 
     val sc: Scanner = new Scanner(System.in)
     val n: Int = sc.nextInt

@@ -37,10 +37,10 @@ object CultureConference {
     override def toString: String = s"[$empId -> $empSupId : $burnt]"
   }
 
-  def main(args: Array[String]) {
+  def main(args: Array[String]):Unit = {
     var (burnedEmpList: List[Int], nearbyBurnedEmp: ListMap[Int, List[Int]]) = getInitialData
     //    println(nearbyBurnedEmp)
-    var empVacationList:scala.collection.mutable.MutableList[Int] = new mutable.MutableList[Int]()
+    var empVacationList:scala.collection.mutable.ListBuffer[Int] = new mutable.ListBuffer[Int]()
 
     while(!burnedEmpList.isEmpty) {
 //      Thread.sleep(100)
@@ -81,6 +81,7 @@ object CultureConference {
       empList
         .groupBy(_.empSupId)
         .mapValues(el => el.withFilter(_.burnt).map(_.empId))
+        .toMap
         .filterNot(_._2.isEmpty)
 
     //    println(burntChildList)
@@ -126,7 +127,7 @@ object CultureConference {
 //  }
 
   private def readEmployees(sc: Scanner, n: Int): List[Emp] = {
-    val empMutableList: mutable.MutableList[Emp] = new mutable.MutableList[Emp]()
+    val empMutableList: mutable.ListBuffer[Emp] = new mutable.ListBuffer[Emp]()
     for (i <- 1 to n-1) {
       empMutableList.+=(Emp(i, sc.nextInt(), sc.nextInt() match { case 0 => true case _ => false }))
     }

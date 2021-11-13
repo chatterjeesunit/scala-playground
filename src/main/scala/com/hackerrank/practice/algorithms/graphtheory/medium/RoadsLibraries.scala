@@ -94,16 +94,20 @@ object RoadsLibraries {
 
 
   case class Graph(numVertex: Int, numEdges: Int) {
-    private var vertexEdges: mutable.Map[Int, mutable.MutableList[Int]] = mutable.HashMap[Int, mutable.MutableList[Int]]()
+    private var vertexEdges: mutable.Map[Int, mutable.ListBuffer[Int]] = mutable.HashMap[Int, mutable.ListBuffer[Int]]()
 
 
 //    (0 until numVertex).foreach(v => {
-//      vertexEdges.put(v, new mutable.MutableList[Int])
+//      vertexEdges.put(v, new mutable.ListBuffer[Int])
 //    })
 
     def addEdge(v1:Int, v2:Int):Unit = {
-      val list1: mutable.MutableList[Int] = vertexEdges.getOrElse(v1-1, new mutable.MutableList[Int])
-      val list2: mutable.MutableList[Int] = vertexEdges.getOrElse(v2-1, new mutable.MutableList[Int])
+      val list1: mutable.ListBuffer[Int] = {
+        vertexEdges.getOrElse(v1 - 1, new mutable.ListBuffer[Int])
+      }
+      val list2: mutable.ListBuffer[Int] = {
+        vertexEdges.getOrElse(v2 - 1, new mutable.ListBuffer[Int])
+      }
       list1 += v2-1
       list2 += v1-1
       vertexEdges.put(v1-1, list1)
