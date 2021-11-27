@@ -1,4 +1,4 @@
-package com.rockthejvm.scalabeginners.lectures
+package com.rockthejvm.scalabeginners.lectures.part1
 
 import org.joda.time.DateTime
 
@@ -17,10 +17,7 @@ object DefaultAndNamedArguments extends App {
   println(s"Sum of first 100 numbers = ${sumN(100)}")
 
 
-
-
-
-  def logMessage(message: String, timestamp: DateTime = DateTime.now(), logLevel:String = "INFO"): Unit = {
+  def logMessage(message: String, timestamp: DateTime = DateTime.now(), logLevel: String = "INFO"): Unit = {
     println(s"${logLevel} - ${timestamp} : ${message}")
   }
 
@@ -32,12 +29,10 @@ object DefaultAndNamedArguments extends App {
   logMessage(logLevel = "DEBUG", message = "dummy message")
 
 
-
-
-
-  def displayMessage(greet: String = "Hello", name: String):Unit = {
+  def displayMessage(greet: String = "Hello", name: String): Unit = {
     println(s"$greet $name")
   }
+
   displayMessage("Hola", "Sunit")
   displayMessage(name = "Sunit")
 }

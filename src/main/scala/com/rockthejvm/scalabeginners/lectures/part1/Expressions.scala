@@ -1,4 +1,4 @@
-package com.rockthejvm.scalabeginners.lectures
+package com.rockthejvm.scalabeginners.lectures.part1
 
 import scala.util.Random
 

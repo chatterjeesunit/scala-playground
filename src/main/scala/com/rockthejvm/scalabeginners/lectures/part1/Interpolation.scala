@@ -1,12 +1,12 @@
-package com.rockthejvm.scalabeginners.lectures
+package com.rockthejvm.scalabeginners.lectures.part1
 
-object Interpolation extends App{
+object Interpolation extends App {
 
-  val item:String = "apple"
+  val item: String = "apple"
   val price: Double = 25.5
   val quantity: Int = 9
 
-  val costMessage = "Price of " + quantity + " " + item + "s, is " + quantity*price + " EUR"
+  val costMessage = "Price of " + quantity + " " + item + "s, is " + quantity * price + " EUR"
   println(costMessage)
 
   val costMessage2 = s"Price of ${quantity} ${item}s, is ${quantity * price} EUR"
@@ -29,19 +29,21 @@ object Interpolation extends App{
     "\"name\": \"John Doe\",\n " +
     "\"age\" : 10\n" +
     "}"
-  println (longString1)
+  println(longString1)
 
 
-  val longString2: String = """{
+  val longString2: String =
+    """{
                               "name": "John Doe",
                               "age" : 10
                               }"""
   println(longString2)
 
-  val longString3: String = """{
-                              | "name": "John Doe",
-                              | "age" : 10
-                              |}""".stripMargin
+  val longString3: String =
+    """{
+      | "name": "John Doe",
+      | "age" : 10
+      |}""".stripMargin
 
-    println (longString3)
+  println(longString3)
 }

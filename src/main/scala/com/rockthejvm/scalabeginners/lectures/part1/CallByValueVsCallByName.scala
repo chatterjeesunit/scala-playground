@@ -1,10 +1,10 @@
-package com.rockthejvm.scalabeginners.lectures
+package com.rockthejvm.scalabeginners.lectures.part1
 
-object CallByValueVsCallByName extends App{
+object CallByValueVsCallByName extends App {
 
   def timer1[R](func: => R): R = {
     val startTime = System.nanoTime()
-    val result:R = func
+    val result: R = func
     val endTime = System.nanoTime()
     println(s"Time taken to execute function is ${endTime - startTime} nanoseconds")
     result
@@ -13,14 +13,14 @@ object CallByValueVsCallByName extends App{
 
   def timer2[R](func: R): R = {
     val startTime = System.nanoTime()
-    val result:R = func
+    val result: R = func
     val endTime = System.nanoTime()
     println(s"Time taken to execute function is ${endTime - startTime} nanoseconds")
     result
   }
 
 
-  def fibonnaci(n: Long): Long = if (n <= 2) 1 else fibonnaci(n-2) + fibonnaci(n-1)
+  def fibonnaci(n: Long): Long = if (n <= 2) 1 else fibonnaci(n - 2) + fibonnaci(n - 1)
 
 
   println(s"Fibonacci of 50 is ${timer1(fibonnaci(50))}")
