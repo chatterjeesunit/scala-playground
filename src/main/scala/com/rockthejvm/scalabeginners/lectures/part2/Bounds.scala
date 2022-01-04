@@ -1,24 +1,6 @@
 package com.rockthejvm.scalabeginners.lectures.part2
 
 object Bounds extends App {
-
-  abstract class Animal(val name: String, val animalType: String) {
-    override def toString: String = s"${animalType}(${name})"
-  }
-
-  abstract class DomesticAnimal(name: String, animalType: String) extends Animal(name, animalType)
-  abstract class WildAnimal(name: String, animalType: String) extends Animal(name, animalType)
-
-  abstract class Pet(name: String, animalType: String) extends DomesticAnimal(name, animalType)
-  abstract class FarmAnimal(name: String, animalType: String) extends DomesticAnimal(name, animalType)
-
-  class Dog(name: String) extends Pet(name, "Dog")
-  class Cat(name: String) extends Pet(name, "Cat")
-  class Cow(name: String) extends FarmAnimal(name, "Cow")
-  class Goat(name: String) extends FarmAnimal(name, "Goat")
-  class Tiger(name: String) extends WildAnimal(name, "Tiger")
-  class Dinosaur(name: String) extends Animal(name, "Dinosaur")
-
   def trainDomesticAnimals[A <: DomesticAnimal](animal: A): Unit = {
     println(s"Training $animal")
   }
@@ -91,3 +73,20 @@ object Bounds extends App {
 
 }
 
+
+abstract class Animal(val name: String, val animalType: String) {
+  override def toString: String = s"${animalType}(${name})"
+}
+
+abstract class DomesticAnimal(name: String, animalType: String) extends Animal(name, animalType)
+abstract class WildAnimal(name: String, animalType: String) extends Animal(name, animalType)
+
+abstract class Pet(name: String, animalType: String) extends DomesticAnimal(name, animalType)
+abstract class FarmAnimal(name: String, animalType: String) extends DomesticAnimal(name, animalType)
+
+class Dog(name: String) extends Pet(name, "Dog")
+class Cat(name: String) extends Pet(name, "Cat")
+class Cow(name: String) extends FarmAnimal(name, "Cow")
+class Goat(name: String) extends FarmAnimal(name, "Goat")
+class Tiger(name: String) extends WildAnimal(name, "Tiger")
+class Dinosaur(name: String) extends Animal(name, "Dinosaur")
