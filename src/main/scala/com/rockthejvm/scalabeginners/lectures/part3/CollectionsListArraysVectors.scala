@@ -1,59 +1,8 @@
 package com.rockthejvm.scalabeginners.lectures.part3
 
-object Collections extends App {
+object CollectionsListArraysVectors extends App {
 
-  // SEQUENCES
-  val seqofInts: Seq[Int] = Seq( 4, 5, 7, 8)  //Creating Sequences
-
-  seqofInts(2)                          // Access element at index 2 in the seq
-
-  seqofInts.updated(2, 0)               //Return a new updated sequence
-
-  Seq.fill(3)(false)                    //Creates a sequence of size 3 prefilled with false value
-
-  Seq.fill(2, 3)(false)                 //Creates a sequence of sequence, prefilled with false
-
-  seqofInts.foreach( x => println(x))   //use foreach to interate and perform an action
-
-  seqofInts.mkString(" -> ")            //can convert it to a string. e.g. "4 -> 5 -> 7 -> 8"
-
-  seqofInts.reverse                     //can reverse a sequence
-
-  seqofInts.sorted                      //can sort a sequence
-
-  seqofInts ++ Seq(6, 3, 1, 5)          //can append two sequences using ++ operator
-
-  9 +: seqofInts :+ 10                  //to prepend and append elements to a seq
-
-  Seq(1, 5, 2, 5, 7, 3, 2).distinct     //can get distinct elements from the sequence
-
-  seqofInts.filter(_ % 2 == 0)          //can filter a seq
-
-  seqofInts.map(x => x * x)             //can map a seq
-
-
-
-
-  // RANGES
-
-  val rangeInclusive = 1 to 10
-  rangeInclusive.foreach(x => println(x))
-
-  val rangeExclusive = 1 until 10
-  rangeInclusive.foreach(x => println(x))
-
-  val rangeWithStep = 1 to (10,2)  // 1 3 5 7 9
-  rangeWithStep.foreach(x => println(x))
-
-  //Range can be converted to seq
-  val seq: Seq[Int] = 1 until 10
-
-
-
-
-
-  // LISTS
-
+  //Lists
   val listOfInts: List[Int] = List( 4, 5, 7, 8)  //Creating Lists
 
   listOfInts(2)                          // Access element at index 2 in the list
@@ -107,8 +56,4 @@ object Collections extends App {
   //Vector
   val vector = Vector(1 ,2, 3)
   // almost same operations as lists
-
-  //Maps
-
-  //Tuples
 }

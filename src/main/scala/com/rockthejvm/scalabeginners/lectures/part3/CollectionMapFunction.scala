@@ -1,6 +1,6 @@
 package com.rockthejvm.scalabeginners.lectures.part3
 
-object CollectionMap extends App {
+object CollectionMapFunction extends App {
 
   val salaries = List(1000, 1222, 2311, 521, 2324, 3422)
 
