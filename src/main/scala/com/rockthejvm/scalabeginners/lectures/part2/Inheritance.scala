@@ -13,13 +13,13 @@ object Inheritance extends App {
     def sound(): String = "Barks"
   }
 
-  class Cat(override val animalType: String) extends Animal {
-    def sound(): String = "Meows"
+  class Rabbit(override val animalType: String) extends Animal {
+    def sound(): String = "Squeals"
   }
   
   val dog: Animal = new Dog
-  val cat: Animal = Cat("Cat")
-  
+  val rabbit: Animal = Rabbit("Rabbit")
+
   dog.makeSound()
-  cat.makeSound()
+  rabbit.makeSound()
 }
