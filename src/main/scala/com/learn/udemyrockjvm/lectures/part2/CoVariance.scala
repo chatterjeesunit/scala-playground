@@ -1,6 +1,6 @@
 package com.learn.udemyrockjvm.lectures.part2
 
-import com.rockthejvm.scalabeginners.exercises.{MyEmpty, MyLinkedList}
+import com.learn.udemyrockjvm.exercises.{MyEmpty, MyLinkedList}
 
 
 object CoVariance extends App {

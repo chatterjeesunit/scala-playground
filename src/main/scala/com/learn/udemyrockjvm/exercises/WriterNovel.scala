@@ -1,4 +1,4 @@
-package com.rockthejvm.scalabeginners.exercises
+package com.learn.udemyrockjvm.exercises
 
 import org.joda.time.LocalDate
 import scala.language.postfixOps
