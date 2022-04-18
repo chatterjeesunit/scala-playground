@@ -51,10 +51,11 @@ class ConsSet[A](val head: A, val tail: GenericSet[A]) extends GenericSet[A] {
 
   def ++(anotherSet: GenericSet[A]): GenericSet[A] = tail ++ anotherSet + head
 
-  def &(anotherSet: GenericSet[A]): GenericSet[A] =
-    if(anotherSet.isEmpty || this.isEmpty) NilSet()
-    else if (anotherSet.contains(this.head)) (this.tail & anotherSet) + head
-    else this.tail & anotherSet
+  def &(anotherSet: GenericSet[A]): GenericSet[A] = this filter anotherSet
+  // equivalent to - this.filter(x => anotherSet.contains(x))
+  // which is equivalent to this.filter(x => anotherSet(x)) , since apply basically calls contains
+  // which is equivalent to this.filter(anotherSet)
+  // which is equivalent to this filter anotherSet
 
   def --(anotherSet: GenericSet[A]): GenericSet[A] =
     this.filter( elem => !anotherSet.contains(elem)) ++

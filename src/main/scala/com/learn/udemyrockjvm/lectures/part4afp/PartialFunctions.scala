@@ -1,4 +1,4 @@
-package com.learn.udemyrockjvm.part4afp
+package com.learn.udemyrockjvm.lectures.part4afp
 
 import scala.util.Try
 
